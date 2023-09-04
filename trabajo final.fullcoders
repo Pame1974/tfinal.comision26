@@ -1,0 +1,91 @@
+Algoritmo DescuentoStockProductosConPedidoYBienvenida
+    Definir stockInicialA, stockInicialB, stockInicialC, stockInicialD, stockInicialE Como Entero
+    Definir nombreCliente Como Cadena
+    Definir fechaPedido Como Cadena
+	
+    stockInicialA <- 150
+    stockInicialB <- 100
+    stockInicialC <- 100
+    stockInicialD <- 80
+    stockInicialE <- 50
+	
+    Escribir "¡Bienvenido al sistema de pedidos!"
+	
+    Escribir "Ingrese el nombre y apellido o razón social del cliente:"
+    Leer nombreCliente
+	
+    Escribir "Ingrese la fecha del pedido (DD/MM/AAAA):"
+    Leer fechaPedido
+	
+    Para contador Desde 1 Hasta 3 Hacer
+        Escribir "Pedido número ", contador
+        Escribir "Ingrese la cantidad de productos A pedidos:"
+        Leer pedidoA
+		
+        Escribir "Ingrese la cantidad de productos B pedidos:"
+        Leer pedidoB
+		
+        Escribir "Ingrese la cantidad de productos C pedidos:"
+        Leer pedidoC
+		
+        Escribir "Ingrese la cantidad de productos D pedidos:"
+        Leer pedidoD
+		
+        Escribir "Ingrese la cantidad de productos E pedidos:"
+        Leer pedidoE
+		
+        Si pedidoA > stockInicialA Entonces
+            Escribir "¡Lo sentimos, la cantidad de Producto A que desea no está disponible en el stock!"
+        Sino
+            stockInicialA <- stockInicialA - pedidoA
+            Si stockInicialA <= 10 Entonces
+                Escribir "¡Atención! El stock de Producto A está por debajo de 10 unidades."
+            FinSi
+        FinSi
+		
+        Si pedidoB > stockInicialB Entonces
+            Escribir "¡Lo sentimos, la cantidad de Producto B que desea no está disponible en el stock!"
+        Sino
+            stockInicialB <- stockInicialB - pedidoB
+            Si stockInicialB <= 10 Entonces
+                Escribir "¡Atención! El stock de Producto B está por debajo de 10 unidades."
+            FinSi
+        FinSi
+		
+        Si pedidoC > stockInicialC Entonces
+            Escribir "¡Lo sentimos, la cantidad de Producto C que desea no está disponible en el stock!"
+        Sino
+            stockInicialC <- stockInicialC - pedidoC
+            Si stockInicialC <= 10 Entonces
+                Escribir "¡Atención! El stock de Producto C está por debajo de 10 unidades."
+            FinSi
+        FinSi
+		
+        Si pedidoD > stockInicialD Entonces
+            Escribir "¡Lo sentimos, la cantidad de Producto D que desea no está disponible en el stock!"
+        Sino
+            stockInicialD <- stockInicialD - pedidoD
+            Si stockInicialD <= 10 Entonces
+                Escribir "¡Atención! El stock de Producto D está por debajo de 10 unidades."
+            FinSi
+        FinSi
+		
+        Si pedidoE > stockInicialE Entonces
+            Escribir "¡Lo sentimos, la cantidad de Producto E que desea no está disponible en el stock!"
+        Sino
+            stockInicialE <- stockInicialE - pedidoE
+            Si stockInicialE <= 10 Entonces
+                Escribir "¡Atención! El stock de Producto E está por debajo de 10 unidades."
+            FinSi
+        FinSi
+    FinPara
+	
+    Escribir "Pedido(s) realizado(s) por:", nombreCliente
+    Escribir "Fecha(s) del pedido:", fechaPedido
+    Escribir "Stock actualizado:"
+    Escribir "Producto A:", stockInicialA
+    Escribir "Producto B:", stockInicialB
+    Escribir "Producto C:", stockInicialC
+    Escribir "Producto D:", stockInicialD
+    Escribir "Producto E:", stockInicialE
+FinAlgoritmo
